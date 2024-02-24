@@ -4,7 +4,10 @@ import { Models } from "appwrite";
 
 export type SearchResultProps = {
   isSearchFetching: boolean;
-  searchedPosts: Models.Document[];
+  searchedPosts?: {
+    documents: Models.Document[];
+    // Other properties if any
+  };
 };
 
 export const SearchResults = ({ isSearchFetching, searchedPosts }: SearchResultProps) => {

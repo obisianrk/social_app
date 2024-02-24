@@ -13,14 +13,13 @@ const Explore = () => {
   const { ref, inView } = useInView();
   const { data: posts, fetchNextPage, hasNextPage } = useGetPosts();
 
-  console.log(posts)
-
   const [searchValue, setSearchValue] = useState("");
 
   // ~ debouncing is just passing the search value after som time
   const debouncedSearch = useDebounce(searchValue, 500);
   const { data: searchedPosts, isFetching: isSearchFetching } = useSearchPosts(debouncedSearch);
 
+  console.log(`Search----->${JSON.stringify(searchedPosts)} -----------------*******type: ${typeof searchedPosts}`)
   useEffect(() => {
     if (inView && !searchValue) {
       fetchNextPage();
@@ -80,7 +79,7 @@ const Explore = () => {
         {shouldShowSearchResults ? (
           <SearchResults
             isSearchFetching={isSearchFetching}
-            searchedPosts={searchedPosts}
+            searchedPosts={searchedPosts || { documents: [] }}
           />
         ) : shouldShowPosts ? (
           <p className="w-full mt-10 text-center text-light-4">End of posts</p>
