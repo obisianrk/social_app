@@ -10,6 +10,7 @@ const CreatePost = () => {
             width={36}
             height={36}
             alt="add"
+            className="w-6 h-6 mt-1"
           />
           <h2 className="w-full text-left h3-bold md:h2-bold">Create Post</h2>
         </div>

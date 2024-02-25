@@ -25,7 +25,7 @@ const PostCard = ({ post }: PostCardProps) => {
                 "/assets/icons/profile-placeholder.svg"
               }
               alt="creator"
-              className="w-12 rounded-full lg:h-12"
+              className="rounded-full w-9 h-9 lg:h-9"
             />
           </Link>
 
@@ -47,7 +47,7 @@ const PostCard = ({ post }: PostCardProps) => {
 
         <Link
           to={`/update-post/${post.$id}`}
-          className={`${user.id !== post.creator.$id && "hidden"}`}>
+          className={`${user.id !== post.creator.$id && "hidden"} w-4 h-4`}>
           <img
             src={"/assets/icons/edit.svg"}
             alt="edit"

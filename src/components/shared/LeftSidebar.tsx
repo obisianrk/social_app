@@ -31,7 +31,7 @@ const LeftSidebar = () => {
           <div className="flex items-center justify-start flex-1 gap-1">
             <img
               src="/assets/images/icon.svg"
-              className="w-12 h-12"
+              className="w-9 h-9"
               alt="logo"
             />
             <h1 className="text-logo h3-bold">Social App</h1>
@@ -47,7 +47,7 @@ const LeftSidebar = () => {
             <img
               src={user.imageUrl || "/assets/icons/profile-placeholder.svg"}
               alt="profile"
-              className="rounded-full h-14 w-14"
+              className="w-10 h-10 rounded-full"
             />
             <div className="flex flex-col">
               <p className="body-bold">{user.name}</p>
@@ -56,7 +56,7 @@ const LeftSidebar = () => {
           </Link>
         )}
 
-        <ul className="flex flex-col gap-6">
+        <ul className="flex flex-col gap-4">
           {sidebarLinks.map((link: INavLink) => {
             const isActive = pathname === link.route;
 
@@ -69,12 +69,12 @@ const LeftSidebar = () => {
               >
                 <NavLink
                   to={link.route}
-                  className="flex items-center gap-4 p-4"
+                  className="flex items-center gap-4 p-3"
                 >
                   <img
                     src={link.imgURL}
                     alt={link.label}
-                    className={`group-hover:invert-white ${
+                    className={`group-hover:invert-white w-5 h-5 ${
                       isActive && "invert-white"
                     }`}
                   />

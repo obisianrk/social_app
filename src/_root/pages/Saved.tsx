@@ -24,7 +24,7 @@ const Saved = () => {
           width={36}
           height={36}
           alt="edit"
-          className="invert-white"
+          className="w-6 h-6 mt-1 invert-white"
         />
         <h2 className="w-full text-left h3-bold md:h2-bold">Saved Posts</h2>
       </div>

@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import AuthProvider from "./context/AuthContext";
 import QueryProvider from "./lib/react-query/QueryProvider";
-// 1:57
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <QueryProvider>
